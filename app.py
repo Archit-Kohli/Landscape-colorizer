@@ -18,5 +18,5 @@ def generate_image(input_img):
                               method=tf.image.ResizeMethod.NEAREST_NEIGHBOR)
     out_img = out_img.numpy()*0.5 + 0.5
     return out_img
-app =  gr.Interface(fn = generate_image, inputs="image", outputs="image")
+app =  gr.Interface(fn = generate_image, inputs="image", outputs="image",examples=['pix2pix-example1.jpg','pix2pix-example2.jpg','pix2pix-example3.jpg','pix2pix-example4.jpg'])
 app.launch(debug=False)
